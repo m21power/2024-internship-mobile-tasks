@@ -8,23 +8,23 @@ class Searchpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
             "Search Product ",
             style: TextStyle(
-                fontFamily: "Poppins",
-                fontSize: 16,
-                fontWeight: FontWeight.w500),
+                fontFamily: "Poppins", fontSize: 16, fontWeight: FontWeight.w500),
           ),
           backgroundColor: Colors.white,
-          leading: const Icon(
-            Icons.chevron_left,
-            color: Color.fromARGB(255, 20, 89, 239),
+          leading: GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: const Icon(
+              Icons.chevron_left,
+              color: Color.fromARGB(255, 20, 89, 239),
+            ),
           ),
         ),
         body: Column(

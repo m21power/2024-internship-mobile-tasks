@@ -9,9 +9,8 @@ class updatepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
@@ -23,9 +22,12 @@ class updatepage extends StatelessWidget {
                 fontWeight: FontWeight.w500),
           ),
           backgroundColor: Colors.white,
-          leading: const Icon(
-            Icons.chevron_left,
-            color: Color.fromARGB(255, 24, 96, 239),
+          leading: TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Icon(
+              Icons.chevron_left,
+              color: Color.fromARGB(255, 24, 96, 239),
+            ),
           ),
         ),
 

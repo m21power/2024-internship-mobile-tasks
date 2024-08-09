@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget header() {
+Widget header(context) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Container(
@@ -75,11 +75,14 @@ Widget header() {
                           color: Color.fromARGB(250, 228, 219, 219))),
                   borderRadius: BorderRadius.circular(9),
                   color: Colors.white),
-              child: const Icon(
-                Icons.search_outlined,
-                weight: 1,
-                size: 24,
-                color: Colors.grey,
+              child: GestureDetector(
+                onTap: () => Navigator.pushNamed(context, '/search'),
+                child: const Icon(
+                  Icons.search_outlined,
+                  weight: 1,
+                  size: 24,
+                  color: Colors.grey,
+                ),
               ),
             ),
             title: const Text(
