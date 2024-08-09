@@ -25,6 +25,9 @@ class AddDesc extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             color: Color.fromARGB(238, 226, 218, 218),
           ),
+          child: const TextField(
+            decoration: InputDecoration(border: InputBorder.none),
+          ),
         ),
       ],
     );

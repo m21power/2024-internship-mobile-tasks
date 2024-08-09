@@ -13,9 +13,7 @@ class AddName extends StatelessWidget {
         const Text(
           "  name",
           style: TextStyle(
-              fontFamily: "Poppins",
-              fontSize: 14,
-              fontWeight: FontWeight.w500),
+              fontFamily: "Poppins", fontSize: 14, fontWeight: FontWeight.w500),
         ),
         const SizedBox(
           height: 8,
@@ -27,9 +25,11 @@ class AddName extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             color: Color.fromARGB(238, 226, 218, 218),
           ),
+          child: const TextField(
+            decoration: InputDecoration(border: InputBorder.none),
+          ),
         ),
       ],
     );
   }
 }
-
