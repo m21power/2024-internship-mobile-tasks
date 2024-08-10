@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfirst_app/Update/UpdatePage.dart';
+import '../Update/UpdatePage.dart';
 import 'Group.dart';
 import 'header.dart';
 
@@ -42,10 +42,10 @@ class _HomepageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   PageRouteBuilder(
-                    transitionDuration: Duration(milliseconds: 500),
+                    transitionDuration: const Duration(milliseconds: 500),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
-                      var begin = Offset(1.0, 0.0);
+                      var begin = const Offset(1.0, 0.0);
                       var end = Offset.zero;
                       var curve = Curves.ease;
 
@@ -58,7 +58,7 @@ class _HomepageState extends State<HomePage> {
                       );
                     },
                     pageBuilder: (context, animation, secondaryAnimation) {
-                      return updatepage();
+                      return const UpdatePage();
                     },
                   ),
                 );

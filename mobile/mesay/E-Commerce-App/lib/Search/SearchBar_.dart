@@ -17,23 +17,23 @@ class Searchbar extends StatelessWidget {
               width: 311,
               height: 48,
               decoration: BoxDecoration(
-                border: Border.all(color: Color.fromARGB(255, 231, 224, 224)),
+                border: Border.all(color: const Color.fromARGB(255, 231, 224, 224)),
                 borderRadius: BorderRadius.circular(8),
                 color: Colors.white,
               ),
               child: const Padding(
                 padding: EdgeInsets.only(left: 10, top: 10),
                 child: Text(
-                  "Leather",
+                  'Leather',
                   style: TextStyle(
-                      fontFamily: "Poppins",
+                      fontFamily: 'Poppins',
                       fontSize: 20,
                       color: Colors.grey,
                       fontWeight: FontWeight.w400),
                 ),
               ),
             ),
-            Icon(
+            const Icon(
               Icons.arrow_forward,
               color: Color.fromARGB(255, 20, 89, 239)
             )
@@ -45,13 +45,13 @@ class Searchbar extends StatelessWidget {
         Container(
           width: 48,
           height: 48,
-          child: Icon(
-            Icons.filter_list,
-            color: Colors.white,
-          ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             color: Color.fromARGB(255, 20, 89, 239),
+          ),
+          child: const Icon(
+            Icons.filter_list,
+            color: Colors.white,
           ),
         )
       ],

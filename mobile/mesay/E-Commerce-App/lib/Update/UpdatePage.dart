@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:myfirst_app/Update/AddDescr.dart';
-import 'ImageUploader_.dart';
+
+import 'AddDescr.dart';
 import 'AddName_.dart';
 import 'AddPrice_.dart';
+import 'ImageUploader_.dart';
 
-class updatepage extends StatelessWidget {
-  const updatepage({super.key});
+class UpdatePage extends StatelessWidget {
+  const UpdatePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +16,9 @@ class updatepage extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            "Add Product ",
+            'Add Product ',
             style: TextStyle(
-                fontFamily: "Poppins",
+                fontFamily: 'Poppins',
                 fontSize: 16,
                 fontWeight: FontWeight.w500),
           ),
@@ -34,17 +35,17 @@ class updatepage extends StatelessWidget {
         // where image uploaded
         body: Column(
           children: [
-            ImageUploader(),
+            const ImageUploader(),
             const SizedBox(
               height: 10,
             ),
             // for name
-            AddName(),
+            const AddName(),
             // for price
             const SizedBox(
               height: 10,
             ),
-            AddPrice(),
+            const AddPrice(),
             const SizedBox(height: 10),
             const AddDesc(),
             const SizedBox(
@@ -60,10 +61,10 @@ class updatepage extends StatelessWidget {
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "ADD",
+                  'ADD',
                   style: TextStyle(
                       color: Colors.white,
-                      fontFamily: "Poppins",
+                      fontFamily: 'Poppins',
                       fontSize: 14,
                       fontWeight: FontWeight.w600),
                 ),
@@ -83,10 +84,10 @@ class updatepage extends StatelessWidget {
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "DELETE",
+                  'DELETE',
                   style: TextStyle(
                       color: Colors.red,
-                      fontFamily: "Poppins",
+                      fontFamily: 'Poppins',
                       fontSize: 14,
                       fontWeight: FontWeight.w600),
                 ),

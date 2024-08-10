@@ -10,27 +10,25 @@ Widget group() {
           ClipRRect(
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(16), topRight: Radius.circular(16)),
-            child: Container(
-              child: Image.asset(
-                "assets/shoe.jpeg",
-                fit: BoxFit.cover,
-              ),
+            child: Image.asset(
+              'assets/shoe.jpeg',
+              fit: BoxFit.cover,
             ),
           ),
           const ListTile(
             dense: true,
             title: Text(
-              "Derby Leather Shoes",
+              'Derby Leather Shoes',
               style: TextStyle(
                   fontSize: 20,
-                  fontFamily: "Poppins",
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w500),
             ),
             trailing: Text(
-              "\$120",
+              '\$120',
               style: TextStyle(
                   fontSize: 14,
-                  fontFamily: "Poppins",
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w500),
             ),
           ),
@@ -43,13 +41,13 @@ Widget group() {
                   Icons.star,
                   color: Colors.orange,
                 ),
-                Text("(4.0)"),
+                Text('(4.0)'),
               ],
             ),
             leading: Text(
               "Men's shoe",
               style: TextStyle(
-                  fontFamily: "Poppins",
+                  fontFamily: 'Poppins',
                   fontSize: 12,
                   fontWeight: FontWeight.w400,
                   color: Colors.grey),

@@ -3,33 +3,33 @@ import 'package:flutter/material.dart';
 Widget header(context) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
-    child: Container(
+    child: SizedBox(
       height: 130,
       //color: Colors.white,
       child: Column(
         children: [
           ListTile(
             title: const Text(
-              "July 14, 2024",
+              'July 14, 2024',
               style: TextStyle(
                   color: Color.fromRGBO(31, 31, 29, 0.322),
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
-                  fontFamily: "Syne"),
+                  fontFamily: 'Syne'),
             ),
             subtitle: const Row(
               children: [
                 Text(
-                  "Hello, ",
+                  'Hello, ',
                   style: TextStyle(
-                      fontFamily: "Sora",
+                      fontFamily: 'Sora',
                       fontWeight: FontWeight.w400,
                       fontSize: 15),
                 ),
                 Text(
-                  "Mesay",
+                  'Mesay',
                   style: TextStyle(
-                      fontFamily: "Sora",
+                      fontFamily: 'Sora',
                       fontWeight: FontWeight.w600,
                       fontSize: 15),
                 ),
@@ -54,7 +54,7 @@ Widget header(context) {
             leading: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(11),
-                  color: Color.fromARGB(202, 209, 202, 202)),
+                  color: const Color.fromARGB(202, 209, 202, 202)),
               width: 50,
               height: 50,
             ),
@@ -86,9 +86,9 @@ Widget header(context) {
               ),
             ),
             title: const Text(
-              "Available Products",
+              'Available Products',
               style: TextStyle(
-                fontFamily: "Poppins",
+                fontFamily: 'Poppins',
                 fontWeight: FontWeight.w600,
                 fontSize: 24,
               ),

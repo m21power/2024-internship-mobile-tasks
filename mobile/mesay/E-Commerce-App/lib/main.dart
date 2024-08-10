@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:myfirst_app/Detail/DetailsPage.dart';
-import 'package:myfirst_app/Home/homepage.dart';
-import 'package:myfirst_app/Update/UpdatePage.dart';
+import 'Detail/DetailsPage.dart';
+import 'Home/homepage.dart';
+
 import 'Search/SearchPage.dart';
+import 'Update/UpdatePage.dart';
 
 void main() {
   runApp(
@@ -12,8 +13,8 @@ void main() {
       routes: {
         '/': (context) => const HomePage(),
         '/detail': (context) => Detail(),
-        '/search': (context) => Searchpage(),
-        '/update': (context) => updatepage(),
+        '/search': (context) => const Searchpage(),
+        '/update': (context) => const UpdatePage(),
       },
     ),
   );

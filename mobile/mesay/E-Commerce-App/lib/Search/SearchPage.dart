@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myfirst_app/Home/Group.dart';
-import 'SearchBar_.dart';
+
+import '../Home/Group.dart';
 import 'BottomPartOfSearch_.dart';
+import 'SearchBar_.dart';
 
 class Searchpage extends StatelessWidget {
   const Searchpage({super.key});
@@ -14,9 +15,9 @@ class Searchpage extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            "Search Product ",
+            'Search Product ',
             style: TextStyle(
-                fontFamily: "Poppins", fontSize: 16, fontWeight: FontWeight.w500),
+                fontFamily: 'Poppins', fontSize: 16, fontWeight: FontWeight.w500),
           ),
           backgroundColor: Colors.white,
           leading: GestureDetector(
@@ -33,8 +34,8 @@ class Searchpage extends StatelessWidget {
               height: 10,
             ),
             // for search bar
-            Searchbar(),
-            SizedBox(
+            const Searchbar(),
+            const SizedBox(
               height: 36,
             ),
             Expanded(
@@ -53,7 +54,7 @@ class Searchpage extends StatelessWidget {
                 ],
               ),
             ),
-            BottomPartOfSearch()
+            const BottomPartOfSearch()
           ],
         ),
       ),
