@@ -37,7 +37,7 @@ class AddPrice extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(bottom: 8, right: 4),
               child: Text(
-                "\$",
+                '\$',
                 style: TextStyle(fontFamily: 'Poppins', fontSize: 16),
               ),
             ),
