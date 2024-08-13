@@ -28,11 +28,10 @@ class AddPrice extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: const Color.fromARGB(238, 226, 218, 218),
-                
               ),
-              child:const TextField(
-            decoration: InputDecoration(border: InputBorder.none),
-          ),
+              child: const TextField(
+                decoration: InputDecoration(border: InputBorder.none),
+              ),
             ),
             const Padding(
               padding: EdgeInsets.only(bottom: 8, right: 4),

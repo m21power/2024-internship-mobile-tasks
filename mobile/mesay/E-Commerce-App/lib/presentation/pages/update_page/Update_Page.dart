@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'AddDescr.dart';
-import 'AddName_.dart';
-import 'AddPrice_.dart';
-import 'ImageUploader_.dart';
+import '../../widgets/update_page_widgets/Image_uploader.dart';
+import '../../widgets/update_page_widgets/adddescr.dart';
+import '../../widgets/update_page_widgets/addname.dart';
+import '../../widgets/update_page_widgets/addprice.dart';
 
 class UpdatePage extends StatelessWidget {
   const UpdatePage({super.key});

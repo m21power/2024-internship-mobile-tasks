@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../widgets/home_page_widgets/group.dart';
 
-import '../Home/Group.dart';
-import 'BottomPartOfSearch_.dart';
-import 'SearchBar_.dart';
+import '../../widgets/search_page_widgets/BottomPartOfSearch.dart';
+import '../../widgets/search_page_widgets/SearchBar.dart';
 
 class Searchpage extends StatelessWidget {
   const Searchpage({super.key});
@@ -17,7 +17,9 @@ class Searchpage extends StatelessWidget {
           title: const Text(
             'Search Product ',
             style: TextStyle(
-                fontFamily: 'Poppins', fontSize: 16, fontWeight: FontWeight.w500),
+                fontFamily: 'Poppins',
+                fontSize: 16,
+                fontWeight: FontWeight.w500),
           ),
           backgroundColor: Colors.white,
           leading: GestureDetector(
@@ -46,7 +48,7 @@ class Searchpage extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: 5,
                       itemBuilder: (context, index) {
-                        return group();
+                        return const Group();
                       },
                     ),
                   ),

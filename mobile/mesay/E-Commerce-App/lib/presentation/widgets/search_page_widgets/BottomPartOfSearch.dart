@@ -26,14 +26,17 @@ class _BottomPartOfSearchState extends State<BottomPartOfSearch> {
               const SizedBox(
                 height: 8,
               ),
-              Container(
-                width: 366,
-                height: 40,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      color: const Color.fromARGB(255, 239, 230, 230)),
-                  borderRadius: BorderRadius.circular(8),
-                  color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(right: 32),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(
+                        color: Color.fromARGB(255, 239, 230, 230),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(
@@ -62,22 +65,30 @@ class _BottomPartOfSearchState extends State<BottomPartOfSearch> {
               const SizedBox(
                 height: 15,
               ),
-              Container(
-                width: 366,
-                height: 40,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      color: const Color.fromARGB(255, 239, 230, 230)),
-                  borderRadius: BorderRadius.circular(8),
-                  color: const Color.fromARGB(255, 20, 89, 239),
-                ),
-                child: TextButton(
-                  child: const Text(
-                    'APPLY',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onPressed: () {},
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 32, bottom: 10),
+                    child: Container(
+                      width: 366,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: const Color.fromARGB(255, 239, 230, 230)),
+                        borderRadius: BorderRadius.circular(8),
+                        color: const Color.fromARGB(255, 20, 89, 239),
+                      ),
+                      child: TextButton(
+                        child: const Text(
+                          'APPLY',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                  )
+                ],
               )
             ],
           ),
