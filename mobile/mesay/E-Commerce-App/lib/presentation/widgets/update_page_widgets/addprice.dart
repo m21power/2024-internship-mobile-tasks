@@ -19,29 +19,21 @@ class AddPrice extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        Stack(
-          alignment: Alignment.bottomRight,
-          children: [
-            Container(
-              width: 366,
-              height: 50,
-              decoration: BoxDecoration(
+        Container(
+          width: 366,
+          height: 50,
+          child: TextField(
+            decoration: InputDecoration(
+              fillColor: const Color.fromARGB(238, 226, 218, 218),
+              filled: true,
+              border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                color: const Color.fromARGB(238, 226, 218, 218),
+                borderSide: BorderSide.none,
               ),
-              child: const TextField(
-                decoration: InputDecoration(border: InputBorder.none),
-              ),
+              suffixIcon: const Icon(Icons.attach_money, color: Colors.grey),
             ),
-            const Padding(
-              padding: EdgeInsets.only(bottom: 8, right: 4),
-              child: Text(
-                '\$',
-                style: TextStyle(fontFamily: 'Poppins', fontSize: 16),
-              ),
-            ),
-          ],
-        ),
+          ),
+        )
       ],
     );
   }

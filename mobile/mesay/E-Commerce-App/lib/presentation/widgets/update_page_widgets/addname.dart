@@ -22,12 +22,15 @@ class AddName extends StatelessWidget {
         Container(
           width: 366,
           height: 50,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: const Color.fromARGB(238, 226, 218, 218),
-          ),
-          child: const TextField(
-            decoration: InputDecoration(border: InputBorder.none),
+          child: TextField(
+            decoration: InputDecoration(
+              fillColor: const Color.fromARGB(238, 226, 218, 218),
+              filled: true,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(16),
+                borderSide: BorderSide.none,
+              ),
+            ),
           ),
         ),
       ],
