@@ -1,5 +1,5 @@
 class Failure {
-  final String message;
+  String message;
 
   Failure([this.message = 'Error occurred, please try again later']);
 }
