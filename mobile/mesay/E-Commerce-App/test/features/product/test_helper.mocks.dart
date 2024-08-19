@@ -5,9 +5,12 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i5;
 
+import 'package:fpdart/fpdart.dart' as _i10;
 import 'package:internet_connection_checker/internet_connection_checker.dart'
     as _i3;
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:mockito/src/dummies.dart' as _i12;
+import 'package:myfirst_app/core/failures/Failure.dart' as _i11;
 import 'package:myfirst_app/features/network/network_info.dart' as _i8;
 import 'package:myfirst_app/features/product/data/data_sources/local_data_sources/local_data_sources.dart'
     as _i7;
@@ -17,6 +20,9 @@ import 'package:myfirst_app/features/product/data/models/product_model.dart'
     as _i2;
 import 'package:myfirst_app/features/product/domain/entities/product_entity.dart'
     as _i6;
+import 'package:myfirst_app/features/product/domain/repository/product_repository.dart'
+    as _i9;
+import 'package:shared_preferences/shared_preferences.dart' as _i13;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -128,49 +134,25 @@ class MockLocalDataSources extends _i1.Mock implements _i7.LocalDataSources {
   }
 
   @override
-  _i5.Future<_i2.ProductModel> getProduct(String? productId) =>
-      (super.noSuchMethod(
+  _i5.Future<_i2.ProductModel> getProduct() => (super.noSuchMethod(
         Invocation.method(
           #getProduct,
-          [productId],
+          [],
         ),
         returnValue: _i5.Future<_i2.ProductModel>.value(_FakeProductModel_0(
           this,
           Invocation.method(
             #getProduct,
-            [productId],
+            [],
           ),
         )),
       ) as _i5.Future<_i2.ProductModel>);
 
   @override
-  _i5.Future<void> createCacheProduct(_i6.ProductEntity? product) =>
+  _i5.Future<void> createCacheProduct(_i2.ProductModel? product) =>
       (super.noSuchMethod(
         Invocation.method(
           #createCacheProduct,
-          [product],
-        ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
-
-  @override
-  _i5.Future<void> deleteProduct({required String? productId}) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #deleteProduct,
-          [],
-          {#productId: productId},
-        ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
-
-  @override
-  _i5.Future<void> updateProduct(_i6.ProductEntity? product) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #updateProduct,
           [product],
         ),
         returnValue: _i5.Future<void>.value(),
@@ -285,4 +267,249 @@ class MockInternetConnectionChecker extends _i1.Mock
           ),
         )),
       ) as _i5.Future<_i3.AddressCheckResult>);
+}
+
+/// A class which mocks [ProductRepository].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockProductRepository extends _i1.Mock implements _i9.ProductRepository {
+  MockProductRepository() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i5.Future<void> createProduct(_i6.ProductEntity? product) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #createProduct,
+          [product],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
+
+  @override
+  _i5.Future<void> deleteProduct({required String? productId}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #deleteProduct,
+          [],
+          {#productId: productId},
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
+
+  @override
+  _i5.Future<void> updateProduct(_i6.ProductEntity? product) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #updateProduct,
+          [product],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
+
+  @override
+  _i5.Future<_i10.Either<_i11.Failure, _i6.ProductEntity>> getProduct(
+          {required String? productId}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getProduct,
+          [],
+          {#productId: productId},
+        ),
+        returnValue:
+            _i5.Future<_i10.Either<_i11.Failure, _i6.ProductEntity>>.value(
+                _i12.dummyValue<_i10.Either<_i11.Failure, _i6.ProductEntity>>(
+          this,
+          Invocation.method(
+            #getProduct,
+            [],
+            {#productId: productId},
+          ),
+        )),
+      ) as _i5.Future<_i10.Either<_i11.Failure, _i6.ProductEntity>>);
+}
+
+/// A class which mocks [SharedPreferences].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSharedPreferences extends _i1.Mock implements _i13.SharedPreferences {
+  MockSharedPreferences() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  Set<String> getKeys() => (super.noSuchMethod(
+        Invocation.method(
+          #getKeys,
+          [],
+        ),
+        returnValue: <String>{},
+      ) as Set<String>);
+
+  @override
+  Object? get(String? key) => (super.noSuchMethod(Invocation.method(
+        #get,
+        [key],
+      )) as Object?);
+
+  @override
+  bool? getBool(String? key) => (super.noSuchMethod(Invocation.method(
+        #getBool,
+        [key],
+      )) as bool?);
+
+  @override
+  int? getInt(String? key) => (super.noSuchMethod(Invocation.method(
+        #getInt,
+        [key],
+      )) as int?);
+
+  @override
+  double? getDouble(String? key) => (super.noSuchMethod(Invocation.method(
+        #getDouble,
+        [key],
+      )) as double?);
+
+  @override
+  String? getString(String? key) => (super.noSuchMethod(Invocation.method(
+        #getString,
+        [key],
+      )) as String?);
+
+  @override
+  bool containsKey(String? key) => (super.noSuchMethod(
+        Invocation.method(
+          #containsKey,
+          [key],
+        ),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  List<String>? getStringList(String? key) =>
+      (super.noSuchMethod(Invocation.method(
+        #getStringList,
+        [key],
+      )) as List<String>?);
+
+  @override
+  _i5.Future<bool> setBool(
+    String? key,
+    bool? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setBool,
+          [
+            key,
+            value,
+          ],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<bool> setInt(
+    String? key,
+    int? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setInt,
+          [
+            key,
+            value,
+          ],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<bool> setDouble(
+    String? key,
+    double? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setDouble,
+          [
+            key,
+            value,
+          ],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<bool> setString(
+    String? key,
+    String? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setString,
+          [
+            key,
+            value,
+          ],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<bool> setStringList(
+    String? key,
+    List<String>? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setStringList,
+          [
+            key,
+            value,
+          ],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<bool> remove(String? key) => (super.noSuchMethod(
+        Invocation.method(
+          #remove,
+          [key],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<bool> commit() => (super.noSuchMethod(
+        Invocation.method(
+          #commit,
+          [],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<bool> clear() => (super.noSuchMethod(
+        Invocation.method(
+          #clear,
+          [],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+
+  @override
+  _i5.Future<void> reload() => (super.noSuchMethod(
+        Invocation.method(
+          #reload,
+          [],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 }

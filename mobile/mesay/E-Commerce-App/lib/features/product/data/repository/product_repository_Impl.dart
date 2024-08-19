@@ -22,7 +22,6 @@ class ProductRepositoryImp implements ProductRepository {
     if (await networkInfo.isConnected) {
       try {
         await remoteDataSource.createProduct(product);
-        await localDataSource.createCacheProduct(product);
       } catch (e) {
         throw ServerFailure();
       }
@@ -36,7 +35,6 @@ class ProductRepositoryImp implements ProductRepository {
     if (await networkInfo.isConnected) {
       try {
         await remoteDataSource.deleteProduct(productId);
-        await localDataSource.deleteProduct(productId: productId);
       } catch (e) {
         throw ServerFailure();
       }
@@ -50,7 +48,6 @@ class ProductRepositoryImp implements ProductRepository {
     if (await networkInfo.isConnected) {
       try {
         await remoteDataSource.updateProduct(product);
-        await localDataSource.createCacheProduct(product);
       } catch (e) {
         throw ServerFailure();
       }
@@ -72,7 +69,7 @@ class ProductRepositoryImp implements ProductRepository {
       }
     } else {
       try {
-        final product = await localDataSource.getProduct(productId);
+        final product = await localDataSource.getProduct();
         return Right(product);
       } catch (e) {
         return Left(CacheFailure());
