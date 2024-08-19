@@ -5,12 +5,6 @@ import 'package:myfirst_app/features/product/data/repository/product_repository_
 
 import '../../../test_helper.mocks.dart';
 
-// class MockRemoteDataSource extends Mock implements RemoteDataSource {}
-
-// class MockLocalDataSource extends Mock implements LocalDataSources {}
-
-// class MockNetworkInfo extends Mock implements NetworkInfo {}
-
 void main() {
   late ProductRepositoryImp repository;
   late MockRemoteDataSource mockRemoteDataSource;

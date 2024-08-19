@@ -1,6 +1,6 @@
 import 'package:fpdart/src/either.dart';
 import '../../../../core/failures/Failure.dart';
-import '../../../platform/network_info.dart';
+import '../../../network/network_info.dart';
 import '../../domain/entities/product_entity.dart';
 import '../../domain/repository/product_repository.dart';
 import '../data_sources/local_data_sources/local_data_sources.dart';
