@@ -39,6 +39,7 @@ dependencies:
   internet_connection_checker: ^1.0.0+1
   shared_preferences: ^2.3.2
   equatable: ^2.0.5
+  logger: ^2.4.0
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +47,7 @@ dev_dependencies:
   get_it: ^7.7.0
   mockito: ^5.4.4
   build_runner: ^2.4.12
+  http: ^1.2.2
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
