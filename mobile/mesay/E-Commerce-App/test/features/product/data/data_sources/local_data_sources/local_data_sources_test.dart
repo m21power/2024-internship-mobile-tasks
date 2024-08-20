@@ -7,7 +7,7 @@ import 'package:myfirst_app/features/product/data/data_sources/local_data_source
 import 'package:myfirst_app/features/product/data/models/product_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../fixtures/fixtures_reader.dart';
+import '../../../../fixtures/fixtures_reader.dart';
 
 class MockSharedPreferences extends Mock implements SharedPreferences {}
 

@@ -47,22 +47,23 @@ class RemoteDataSourcesImpl implements RemoteDataSource {
   }
 
   @override
-  Future<void> createProduct(ProductEntity product) {
+  Future<void> createProduct(ProductEntity product) async {
     final url = Uri.parse(
         'https://g5-flutter-learning-path-be.onrender.com/api/v1/products');
-    return client
-        .post(
-      url,
-      headers: <String, String>{
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
-      body: jsonEncode(product.toJson()),
-    )
-        .then((value) {
-      if (value.statusCode != 201) {
+    try {
+      final response = await client.post(
+        url,
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(product.toJson()),
+      );
+      if (response.statusCode != 201) {
         throw ServerException('Failed to create product');
       }
-    });
+    } catch (e) {
+      throw ServerException('Failed to connect to the server');
+    }
   }
 
   @override
